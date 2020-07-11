@@ -16,6 +16,13 @@ variables:
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
 steps:
+
+- script: |
+    echo $GOPATH
+    echo $GOROOT
+    echo $GOBIN
+    echo $modulepath
+    ls -l /usr/local/ | grep "go"
 - script: |
     mkdir -p '$(GOBIN)'
     mkdir -p '$(GOPATH)/pkg'
