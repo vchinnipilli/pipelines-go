@@ -20,7 +20,11 @@ steps:
   inputs:
     version: '1.13.5'
   displayName: 'Use Go 1.13.5'
-
+- script: |
+    echo $GOPATH
+    pwd
+    whoami
+    
 - task: Go@0
   displayName: 'go get'
   inputs:
