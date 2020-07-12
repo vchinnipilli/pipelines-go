@@ -21,8 +21,11 @@ steps:
     echo $GOPATH
     echo $GOROOT
     echo $GOBIN
-    echo $modulepath
+    echo $(build.repository.name)
+    export GOROOT=$GOROOT
+    export GOPATH=$GOPATH
     ls /usr/local/ | grep "go"
+    echo $modulepath
 - script: |
     mkdir -p '$(GOBIN)'
     mkdir -p '$(GOPATH)/pkg'
