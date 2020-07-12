@@ -22,7 +22,7 @@ steps:
     echo $GOROOT
     echo $GOBIN
     echo $modulepath
-    ls -l /usr/local/ | grep "go"
+    ls /usr/local/ | grep "go"
 - script: |
     mkdir -p '$(GOBIN)'
     mkdir -p '$(GOPATH)/pkg'
